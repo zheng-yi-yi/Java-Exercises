@@ -20,10 +20,48 @@
 
 ## 基础语法和数据类型
 
+给定代码：
 
+```java
+public class SwitchTest{
+    public static void main(String[] args) {
+        System.out.println("value="+switchit(4));   // 输出？
+    }
+    public static int switchit(int x) {
+        int j=1;
+        switch (x) {
+        case 1:j++;
+        case 2:j++;
+        case 3:j++;
+        case 4:j++;
+        case 5:j++;
+        default:j++;
+        }
+        return j+x;
+    }
+}
+```
 
+请问第三行将输出什么？
 
+A、value=6
 
+B、value=8
+
+C、value=3
+
+D、value=5
+
+E、value=4
+
+<details>
+<summary>查看答案</summary>
+
+### 正确答案：B
+
+没有`break`，从`case 4`开始一直执行到最后，`j`自加`3`次变成了`4`,结果返回`8`。
+
+</details>
 
 
 ## 面向对象编程（OOP）
