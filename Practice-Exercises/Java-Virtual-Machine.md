@@ -64,6 +64,46 @@ E. 虚拟机栈
 
 ---
 
+【单选题】下面有关`java classloader`说法错误的是？
+
+A. Java默认提供的三个`ClassLoader`是 `BootStrap ClassLoader`，`Extension ClassLoader`，`App ClassLoader`
+
+B. `ClassLoader`使用的是双亲委托模型来搜索类的
+
+C. JVM在判定两个`class`是否相同时，只用判断类名相同即可，和类加载器无关
+
+D. `ClassLoader`就是用来动态加载class文件到内存当中用的
+
+<details>
+<summary> 查看答案</summary>
+
+**正确答案：C**
+
+知识点：
+
+`JVM`在判定两个`class`是否相同时，不仅要判断两个类名是否相同，而且要判断是否由同一个类加载器实例加载的。
+
+> 相关知识点：
+>
+>  **ClassLoader（类加载器）** 是Java虚拟机（JVM）的一个重要组件，负责将类的字节码加载到内存中，使得程序可以运行。ClassLoader的主要作用是在运行时查找和加载类文件，并生成相应的类对象。
+>
+> Java中的ClassLoader有一个层次结构，通过这个结构可以实现类加载的双亲委托模型。默认的ClassLoader层次结构包括：
+> - `BootStrap ClassLoader`（启动类加载器）：负责加载Java的核心类库，通常用C++实现，是JVM的一部分，无法直接在Java代码中获取。
+> - `Extension ClassLoader`（扩展类加载器）：负责加载Java的扩展类库。
+> - `App ClassLoader`（应用程序类加载器）：负责加载应用程序的类，是程序中默认的ClassLoader。
+>
+>  **双亲委托模型** ： ClassLoader采用双亲委托模型，即在加载类的时候，会首先委托父类加载器加载。如果父类加载器无法加载，才由子类加载器加载。这个机制保证了类的加载顺序和一致性，防止类的重复加载。
+>
+>   **类加载的触发时机**： 类加载是在程序运行时动态进行的，而不是在编译时。类加载的触发时机包括：
+> 1. 当程序创建类的实例时。
+> 2. 当程序访问类的静态变量或静态方法时。
+> 3. 当程序使用反射机制操作类时。
+> 4. 当程序初始化一个类的子类时。
+
+
+</details>
+
+
 <!-- <details>
 <summary> 查看答案</summary>
 
