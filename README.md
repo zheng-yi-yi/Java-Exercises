@@ -13,6 +13,7 @@
 - [基础知识 (Basic Knowledge)](#基础知识-basic-knowledge)
 - [面向对象 (Object-oriented Programming)](#面向对象-object-oriented-programming)
 - [集合 (Collections)](#集合-collections)
+- [Java虚拟机（Java Virtual Machine）](#java虚拟机java-virtual-machine)
 
 ---
 
@@ -181,6 +182,7 @@ D. `c.equals(d)`
 
 ---
 
+# Java虚拟机（Java Virtual Machine）
 
 <!-- # 异常处理 (Exception Handling) -->
 
