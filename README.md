@@ -20,7 +20,7 @@
 
 ## 基础语法和数据类型
 
-给定代码：
+【单选题】给定代码：
 
 ```java
 public class SwitchTest{
@@ -63,6 +63,85 @@ E、value=4
 
 </details>
 
+---
+
+【单选题】以下哪个选项是编译和执行上述代码片段的结果？
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Boolean flag = false;
+        if (flag = true) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
+```
+
+A. 代码在“`if`”语句处无法编译。
+
+B. 在“`if`”语句处运行时抛出异常。
+
+C. 显示文本“`true`”。
+
+D. 显示文本“`false`”。
+
+E. 什么都不显示。
+
+<details>
+<summary>查看答案</summary>
+
+### 正确答案：C
+
+这道题在 `if` 语句的表达式中使用了赋值操作符 `=` 而不是相等性操作符 `==`。
+
+执行到 `if` 语句时，程序首先执行 `valueOf` 方法，用于将基本数据类型 `boolean` 转换为包装类 `Boolean` 对象（自动装箱）：
+
+```java
+public static Boolean valueOf(boolean b) {
+    return (b ? TRUE : FALSE);
+}
+```
+
+此时 会将 `Boolean.TRUE` 赋值给`flag`。接着，程序会调用 `booleanValue` 方法，用于返回基本数据类型 `boolean`（自动拆箱）：
+
+```java
+public boolean booleanValue() {
+    return value;
+}
+```
+
+由于这里 `flag` 对象已经修改为 `Boolean.TRUE` ，因此该方法返回 `true`，执行`if`语句，而不会执行`else`语句，因此输出 `true`。
+
+</details>
+
+---
+
+【多选题】以下说法错误的是（ ）？
+
+A. final修饰的方法不能被重载
+
+B. final可以修饰类、接口、抽象类、方法和属性
+
+C. final修饰的方法也不能被重写
+
+D. final修饰的属性是常量，不可以修改
+
+<details>
+<summary> 查看答案</summary>
+
+### 正确答案：A B
+
+A. final修饰的方法不能重写，但并不影响重载。
+
+B. final不能修饰抽象类和接口
+
+</details>
+
+---
+
 
 ## 面向对象编程（OOP）
 
@@ -78,6 +157,7 @@ D. `c.equals(d)`
 
 <details>
 <summary> 查看答案</summary>
+
 
 ### 正确答案：A和D
 
