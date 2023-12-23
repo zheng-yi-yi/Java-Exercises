@@ -214,6 +214,58 @@ D. XYZX
 
 ---
 
+【单选题】下列程序执行后结果为( )
+
+```java
+class A {
+    public int func1(int a, int b) {
+        return a - b;
+    }
+}
+class B extends A {
+    public int func1(int a, int b) {
+        return a + b;
+    }
+}
+public class ChildClass {
+    public static void main(String[] args) {
+        A a = new B();
+        B b = new B();
+        System.out.println("Result=" + a.func1(100, 50));
+        System.out.println("Result=" + b.func1(100, 50));
+
+    }
+}
+```
+
+A. Result=150 Result=150
+
+B. Result=100 Result=150
+
+C. Result=150 Result=100
+
+D. Result=50 Result=150
+
+<details>
+<summary> 查看答案</summary>
+
+**正确答案：A**
+
+知识点：
+
+**“编译看左边，运行看右边”**，在编译时，Java会看左边引用类型是否能正确编译通过，而在运行时，实际执行的是对象的方法，即运行看右边。
+
+对本题而言，编译时候会发现左边满足条件所以编译通过，运行时候又会调用右边也就是 `class B` 的方法，所以答案都是150。 
+
+> **多态性**： 在Java中，多态性允许一个对象以多种形式存在。具体到这个例子中，对象a声明为A类，但实际上指向了B类的实例。这就是多态性的体现，一个对象可以被当作其父类类型来引用。
+>
+> **方法覆盖**： 在类B中，它继承了类A并覆盖了func1方法。方法覆盖是指在子类中重新定义（覆盖）父类中已有的方法。当子类对象调用这个方法时，会执行子类中的版本而不是父类中的版本。
+
+</details>
+
+
+---
+
 <!-- <details>
 <summary> 查看答案</summary>
 
