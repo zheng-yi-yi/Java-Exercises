@@ -266,6 +266,89 @@ D. Result=50 Result=150
 
 ---
 
+【单选题】以下代码执行后输出结果为（ ）
+
+```java
+public class Test
+{
+    public static Test t1 = new Test();
+    {
+         System.out.println("blockA");
+    }
+    static
+    {
+        System.out.println("blockB");
+    }
+    public static void main(String[] args)
+    {
+        Test t2 = new Test();
+    }
+ }
+```
+
+A. blockAblockBblockA
+
+B. blockAblockAblockB
+
+C. blockBblockBblockA
+
+D. blockBblockAblockB
+
+<details>
+<summary> 查看答案</summary>
+
+**正确答案：A**
+
+首先，需要明白类的加载顺序：
+
+1. 父类静态对象和静态代码块
+2. 子类静态对象和静态代码块 
+3. 父类非静态对象和非静态代码块
+4. 父类构造函数
+5. 非静态对象和非静态代码块
+6. 子类构造函数
+
+其中：
+
+- 类中静态块按照声明顺序执行
+- 并且(1)和(2)不需要调用new类实例的时候就执行了(意思就是在类加载到方法区的时候执行的)
+
+因而，整体的执行顺序为
+  
+
+
+```java
+public class Test
+{
+    public static Test t1 = new Test();  //(1)
+    {
+         System.out.println("blockA");
+    }
+    static
+    {
+        System.out.println("blockB");  //(2)
+    }
+    public static void main(String[] args)
+    {
+        Test t2 = new Test(); //(3)
+    }
+ }
+```
+
+在执行(1)时创建了一个Test对象，在这个过程中会执行非静态代码块和缺省的无参构造函数，在执行非静态代码块时就输出了blockA；然后执行(2)输出blockB；执行(3)的过程同样会执行非静态代码块和缺省的无参构造函数，在执行非静态代码块时输出blockA。因此，最终的结果为：
+
+```bash
+blockA
+blockB
+blockA
+```
+
+至于对`t1`进行初始化时，为什么不先执行`static`代码块，而是先执行构造代码块。这是因为**静态成员变量和静态代码块的优先级是相同的**，先定义的先执行，如果把静态代码块放在静态成员前面，则输出 `BAA`，可以自己试一下。
+
+</details>
+
+---
+
 
 <!-- <details>
 <summary> 查看答案</summary>
