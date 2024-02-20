@@ -6,15 +6,18 @@
 
 <h2>目录</h2>
 
-- [基础知识 (Basic Knowledge)](#基础知识-basic-knowledge)
-- [面向对象 (Object-oriented Programming)](#面向对象-object-oriented-programming)
-- [集合 (Collections)](#集合-collections)
-- [Java虚拟机（Java Virtual Machine）](#java虚拟机java-virtual-machine)
-- [并发（Concurrency）](#并发concurrency)
+- [选择题](#选择题)
+  - [基础知识 (Basic Knowledge)](#基础知识-basic-knowledge)
+  - [面向对象 (Object-oriented Programming)](#面向对象-object-oriented-programming)
+  - [集合 (Collections)](#集合-collections)
+  - [Java虚拟机（Java Virtual Machine）](#java虚拟机java-virtual-machine)
+  - [并发（Concurrency）](#并发concurrency)
 
 ---
 
-# 基础知识 (Basic Knowledge)
+# 选择题
+
+## 基础知识 (Basic Knowledge)
 
 【单选题】给定代码：
 
@@ -64,7 +67,7 @@ E、value=4
 
 ---
 
-# 面向对象 (Object-oriented Programming)
+## 面向对象 (Object-oriented Programming)
 
 【单选题】已知`String a="a"`，`String b="b"`，`String c=a+b`，`String d=new String("ab")`，以下操作结果为`true`的是：
 
@@ -147,7 +150,7 @@ D. `c.equals(d)`
 更多内容查看：[面向对象 (Object-oriented Programming)](/Practice-Exercises/Object-Oriented.md)
 
 
-# 集合 (Collections)
+## 集合 (Collections)
 
 【多选题】**线程安全的map在JDK 1.5及其更高版本环境，有哪几种方法可以实现?**
 
@@ -179,7 +182,7 @@ D. `c.equals(d)`
 
 ---
 
-# Java虚拟机（Java Virtual Machine）
+## Java虚拟机（Java Virtual Machine）
 
 【多选题】以下哪些内存区域属于JVM规范？（　　）
 
@@ -241,7 +244,7 @@ E. 虚拟机栈
 
 ---
 
-# 并发（Concurrency）
+## 并发（Concurrency）
 
 【单选题】下列关于`Java并发`的说法中正确的是（）
 
