@@ -12,6 +12,7 @@
   - [集合 (Collections)](#集合-collections)
   - [Java虚拟机（Java Virtual Machine）](#java虚拟机java-virtual-machine)
   - [并发（Concurrency）](#并发concurrency)
+- [Web开发 (Web Development)](#web开发-web-development)
 
 ---
 
@@ -283,6 +284,29 @@ D，`volatile`只保证多线程操作的可见性，不保证原子性
 
 更多内容查看：[并发（Concurrency）](/Practice-Exercises/Concurrency.md)
 
+
+# Web开发 (Web Development)
+
+【多选题】4. `servlet` 周期包含哪些：
+
+A. 初始化
+
+B. 销毁
+
+C. 请求处理
+
+D. 开始
+
+<details>
+<summary> 查看答案</summary>
+
+**正确答案：ABC**
+
+知识点：
+
+
+
+</details>
 
 ---
 
