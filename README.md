@@ -12,7 +12,7 @@
   - [集合 (Collections)](#集合-collections)
   - [Java虚拟机（Java Virtual Machine）](#java虚拟机java-virtual-machine)
   - [并发（Concurrency）](#并发concurrency)
-- [Web开发 (Web Development)](#web开发-web-development)
+  - [Web开发 (Web Development)](#web开发-web-development)
 
 ---
 
@@ -64,7 +64,7 @@ E、value=4
 
 </details>
 
-更多内容查看：[基础知识 (Basic Knowledge)](/Practice-Exercises/Basic-Knowledge.md)
+更多内容查看：[基础知识 (Basic Knowledge)](./choice-question/Basic-Knowledge.md)
 
 ---
 
@@ -148,7 +148,7 @@ D. `c.equals(d)`
 
 ---
 
-更多内容查看：[面向对象 (Object-oriented Programming)](/Practice-Exercises/Object-Oriented.md)
+更多内容查看：[面向对象 (Object-oriented Programming)](./choice-question/Object-Oriented.md)
 
 
 ## 集合 (Collections)
@@ -179,7 +179,7 @@ D. `c.equals(d)`
 
 </details>
 
-更多内容查看：[集合 (Collections)](/Practice-Exercises/Collections.md)
+更多内容查看：[集合 (Collections)](./choice-question/Collections.md)
 
 ---
 
@@ -241,7 +241,7 @@ E. 虚拟机栈
 
 </details>
 
-更多内容查看：[Java虚拟机（Java Virtual Machine）](/Practice-Exercises/Java-Virtual-Machine.md)
+更多内容查看：[Java虚拟机（Java Virtual Machine）](./choice-question/Java-Virtual-Machine.md)
 
 ---
 
@@ -282,10 +282,10 @@ D，`volatile`只保证多线程操作的可见性，不保证原子性
 
 </details>
 
-更多内容查看：[并发（Concurrency）](/Practice-Exercises/Concurrency.md)
+更多内容查看：[并发（Concurrency）](./choice-question/Concurrency.md)
 
 
-# Web开发 (Web Development)
+## Web开发 (Web Development)
 
 【多选题】4. `servlet` 周期包含哪些：
 
@@ -311,6 +311,9 @@ D. 开始
 选项D "开始"并不是`Servlet`生命周期的一部分，所以正确答案是ABC。
 
 </details>
+
+更多内容查看：[Web开发 (Web Development)](./choice-question/Web-Development.md)
+
 
 ---
 
